@@ -5,6 +5,7 @@ import repository.MedicineRepository;
 import repository.Repository;
 import repository.SaleRepository;
 import service.PharmacyService;
+import service.PharmacyServiceInterface;
 import ui.ConsoleUI;
 
 import java.time.LocalDate;
@@ -17,7 +18,7 @@ public class Main {
 
         addTestData(medicineRepo);
 
-        PharmacyService service = new PharmacyService(medicineRepo, saleRepo);
+        PharmacyServiceInterface service = new PharmacyService(medicineRepo, saleRepo);
         ConsoleUI ui = new ConsoleUI(service);
         ui.start();
     }
@@ -29,5 +30,4 @@ public class Main {
     }
 }
 // в репозитории init где тестовые данные - туда вынести
-// интерфейс!!!! фармаси => его в консоль (у каждого сервиса свой интерфейс) (без этого зависит от конкретики, а не абстракции)
-// фармаси сервис  - сначала валидация , потом логика - два разных сервиса (у каждого есть получается интерфейс?)
+// интерфейс фармаси => его в консоль (у каждого сервиса свой интерфейс) (без этого зависит от конкретики, а не абстракции) - done

@@ -10,7 +10,7 @@ import repository.SaleRepository;
 import java.time.LocalDate;
 import java.util.List;
 
-public class PharmacyService {
+public class PharmacyService implements PharmacyServiceInterface {
     private Repository<Medicine, String> medicineRepo;
     private Repository<Sale, String> saleRepo;
 

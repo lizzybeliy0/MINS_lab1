@@ -15,10 +15,10 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
-    private PharmacyService service;
+    private PharmacyServiceInterface service;
     private Scanner scanner = new Scanner(System.in);
 
-    public ConsoleUI(PharmacyService service) { this.service = service; }
+    public ConsoleUI(PharmacyServiceInterface service) { this.service = service; }
 
     public void start() {
         while (true) {

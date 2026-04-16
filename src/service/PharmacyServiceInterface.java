@@ -1,10 +1,14 @@
 package service;
 
+import model.Medicine;
+import model.Sale;
+
 import java.util.List;
 
-public interface PharmacyServiceInterface<T, ID> {
-    void add(T item);
-    void delete(ID id);
-    List<T> getAll();
-    void sell(ID itemId, int quantity, boolean condition);
+public interface PharmacyServiceInterface {
+    void addMedicine(Medicine medicine);
+    void deleteMedicine(String id);
+    void sellMedicine(String id, int quantity, boolean hasPrescription);
+    List<Medicine> getAllMedicines();
+    List<Sale> getSales();
 }
